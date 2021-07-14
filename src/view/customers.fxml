@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="777.0" prefWidth="1490.0" style="-fx-background-color: #303030;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.CustomersController">
+   <children>
+      <TableView fx:id="customersTable" layoutX="101.0" layoutY="87.0" prefHeight="601.0" prefWidth="1290.0" style="" stylesheets="@../Assets/styles.css" AnchorPane.leftAnchor="95.0" AnchorPane.rightAnchor="95.0">
+         <columns>
+            <TableColumn fx:id="custIDcol" prefWidth="124.61788177490234" text="Customer ID" />
+            <TableColumn fx:id="nameCol" prefWidth="227.72996520996094" text="Name" />
+            <TableColumn fx:id="addressCol" minWidth="0.0" prefWidth="262.3763732910156" text="Address" />
+            <TableColumn fx:id="postalCodeCol" minWidth="0.0" prefWidth="129.12371826171875" text="Postal Code" />
+            <TableColumn fx:id="phoneNumberCol" prefWidth="169.15740966796875" text="Phone Number" />
+            <TableColumn fx:id="stateCol" prefWidth="222.38214111328125" text="State / Province" />
+            <TableColumn fx:id="CountryCol" prefWidth="167.1519775390625" text="Country" />
+         </columns>
+      </TableView>
+      <HBox layoutX="95.0" layoutY="688.0" prefHeight="61.0" prefWidth="502.0">
+         <children>
+            <Button mnemonicParsing="false" onMouseClicked="#addButtonClicked" prefHeight="40.0" prefWidth="82.0" style="-fx-background-color: #fff; -fx-background-radius: 8;" text="Add">
+               <HBox.margin>
+                  <Insets bottom="20.0" left="20.0" right="20.0" top="25.0" />
+               </HBox.margin>
+               <font>
+                  <Font name="Menlo Regular" size="18.0" />
+               </font>
+            </Button>
+            <Button mnemonicParsing="false" onMouseClicked="#modifyButtonClicked" prefHeight="40.0" prefWidth="91.0" style="-fx-background-color: #fff; -fx-background-radius: 8;" text="Modify">
+               <HBox.margin>
+                  <Insets bottom="20.0" left="20.0" right="20.0" top="25.0" />
+               </HBox.margin>
+               <font>
+                  <Font name="Menlo Regular" size="18.0" />
+               </font>
+            </Button>
+            <Button mnemonicParsing="false" onMouseClicked="#DeleteButtonClicked" prefHeight="40.0" prefWidth="92.0" style="-fx-background-color: #fff; -fx-background-radius: 8;" text="Delete">
+               <HBox.margin>
+                  <Insets bottom="20.0" left="20.0" right="20.0" top="25.0" />
+               </HBox.margin>
+               <font>
+                  <Font name="Menlo Regular" size="18.0" />
+               </font>
+            </Button>
+         </children>
+      </HBox>
+   </children>
+</AnchorPane>

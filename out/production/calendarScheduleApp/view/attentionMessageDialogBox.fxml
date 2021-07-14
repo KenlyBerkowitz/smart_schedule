@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Polyline?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="150.0" prefWidth="400.0" style="-fx-background-color: #303030;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.AttentionMessageController">
+   <children>
+      <Button fx:id="okBtn" layoutX="300.0" layoutY="102.0" mnemonicParsing="false" onMouseClicked="#exitMessageBtn" prefHeight="27.0" prefWidth="79.0" style="-fx-background-color: #fff; -fx-background-radius: 8;" text="OK" />
+      <Label layoutX="63.0" layoutY="21.0" prefHeight="21.0" prefWidth="158.0" text="Attention!" textFill="WHITE">
+         <font>
+            <Font name="Menlo Regular" size="17.0" />
+         </font>
+      </Label>
+      <Label fx:id="messageLabel" layoutX="64.0" layoutY="34.0" prefHeight="49.0" prefWidth="301.0" style="-fx-font-family: Menlo;" text="Write attention here" textFill="WHITE" wrapText="true" />
+      <Polyline fill="#eec53f" layoutX="82.0" layoutY="31.0" points="-47.59999465942383, -9.300239562988281, -35.68305969238281, 9.000003814697266, -59.935279846191406, 9.000003814697266, -47.59999465942383, -9.300239562988281" stroke="TRANSPARENT" strokeLineJoin="ROUND" strokeMiterLimit="20.0" />
+   </children>
+</AnchorPane>

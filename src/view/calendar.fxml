@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="777.0" prefWidth="1490.0" style="-fx-background-color: #303030;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.CalendarController">
+   <children>
+      <TableView fx:id="appointmentsTable" layoutX="101.0" layoutY="87.0" prefHeight="601.0" prefWidth="1290.0" style="" stylesheets="@../Assets/styles.css" AnchorPane.leftAnchor="95.0" AnchorPane.rightAnchor="95.0">
+        <columns>
+          <TableColumn fx:id="apptIDcol" prefWidth="85.72698974609375" text="Appt ID" />
+          <TableColumn fx:id="titleCol" prefWidth="108.74285888671875" text="Title" />
+            <TableColumn fx:id="descriptionCol" minWidth="0.0" prefWidth="190.75717163085938" text="Decription" />
+            <TableColumn fx:id="locationCol" minWidth="0.0" prefWidth="115.47622680664062" text="Location" />
+            <TableColumn fx:id="contactCol" prefWidth="153.5491943359375" text="Contact" />
+            <TableColumn fx:id="typeCol" prefWidth="135.95074462890625" text="Type" />
+            <TableColumn fx:id="startTimeCol" prefWidth="192.2666015625" text="Start Date &amp; Time" />
+            <TableColumn fx:id="EndTimeCol" prefWidth="189.2333984375" text="End Date &amp; Time" />
+            <TableColumn fx:id="custIDcol" prefWidth="126.515869140625" text="Customer ID" />
+        </columns>
+      </TableView>
+      <RadioButton fx:id="monthlyRadioButton" layoutX="119.0" layoutY="41.0" mnemonicParsing="false" onMouseClicked="#monthlyRadioButtonClicked" selected="true" text="Monthly" textFill="WHITE">
+         <font>
+            <Font name="Menlo Regular" size="17.0" />
+         </font>
+         <toggleGroup>
+            <ToggleGroup fx:id="weeklyMonthlyToggle" />
+         </toggleGroup>
+      </RadioButton>
+      <RadioButton fx:id="weeklyRadioButton" layoutX="297.0" layoutY="41.0" mnemonicParsing="false" onMouseClicked="#weeklyRadioButtonClicked" text="Weekly" textFill="WHITE" toggleGroup="$weeklyMonthlyToggle">
+         <font>
+            <Font name="Menlo Regular" size="17.0" />
+         </font>
+      </RadioButton>
+      <RadioButton fx:id="AllRadioButton1" layoutX="473.0" layoutY="41.0" mnemonicParsing="false" onMouseClicked="#allRadioButtonClicked" text="All" textFill="WHITE" toggleGroup="$weeklyMonthlyToggle">
+         <font>
+            <Font name="Menlo Regular" size="17.0" />
+         </font>
+      </RadioButton>
+      <HBox layoutX="95.0" layoutY="688.0" prefHeight="78.0" prefWidth="410.0">
+         <children>
+            <Button mnemonicParsing="false" onMouseClicked="#addButtonClicked" prefHeight="40.0" prefWidth="82.0" style="-fx-background-color: #fff; -fx-background-radius: 8;" text="Add">
+               <HBox.margin>
+                  <Insets bottom="20.0" left="20.0" right="20.0" top="25.0" />
+               </HBox.margin>
+               <font>
+                  <Font name="Menlo Regular" size="18.0" />
+               </font>
+            </Button>
+            <Button mnemonicParsing="false" onMouseClicked="#modifyButtonClicked" prefHeight="40.0" prefWidth="91.0" style="-fx-background-color: #fff; -fx-background-radius: 8;" text="Modify">
+               <HBox.margin>
+                  <Insets bottom="20.0" left="20.0" right="20.0" top="25.0" />
+               </HBox.margin>
+               <font>
+                  <Font name="Menlo Regular" size="18.0" />
+               </font>
+            </Button>
+            <Button mnemonicParsing="false" onMouseClicked="#DeleteButtonClicked" prefHeight="40.0" prefWidth="92.0" style="-fx-background-color: #fff; -fx-background-radius: 8;" text="Delete">
+               <HBox.margin>
+                  <Insets bottom="20.0" left="20.0" right="20.0" top="25.0" />
+               </HBox.margin>
+               <font>
+                  <Font name="Menlo Regular" size="18.0" />
+               </font>
+            </Button>
+         </children>
+      </HBox>
+   </children>
+</AnchorPane>

@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="777.0" prefWidth="1500.0" style="-fx-background-color: #303030;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.ReportsController">
+      <children>
+          <TableView fx:id="contactApptTable" layoutX="101.0" layoutY="559.0" prefHeight="169.0" prefWidth="1300.0" style="" stylesheets="@../Assets/styles.css" AnchorPane.leftAnchor="101.0" AnchorPane.rightAnchor="99.0">
+              <columns>
+                  <TableColumn fx:id="apptIDcol" prefWidth="161.56834411621094" text="Appointment ID" />
+                  <TableColumn fx:id="titleCol" prefWidth="207.43167114257812" text="Title" />
+                  <TableColumn fx:id="typeCol" minWidth="0.0" prefWidth="168.86737060546875" text="Type" />
+                  <TableColumn fx:id="descriptionCol" minWidth="0.0" prefWidth="280.431640625" text="Description" />
+                  <TableColumn fx:id="startDateCol" prefWidth="181.5682373046875" text="Start Date &amp; Time" />
+                  <TableColumn fx:id="endDateCol" prefWidth="174.58544921875" text="End Date &amp; Time" />
+                  <TableColumn fx:id="customerID" prefWidth="129.5767822265625" text="Customer ID" />
+              </columns>
+          </TableView>
+      <TableView fx:id="numberApptTable" layoutX="101.0" layoutY="124.0" prefHeight="356.0" prefWidth="625.0" stylesheets="@../Assets/styles.css">
+        <columns>
+          <TableColumn fx:id="numApptTypeCol" prefWidth="298.8651580810547" text="Type" />
+          <TableColumn fx:id="numberApptCol" prefWidth="325.0" text="Number of appointments" />
+        </columns>
+      </TableView>
+      <AnchorPane layoutX="772.0" layoutY="124.0" prefHeight="356.0" prefWidth="625.0" style="-fx-background-color: #fff; -fx-background-radius: 8;">
+         <children>
+            <Label layoutX="91.0" layoutY="-5.0" prefHeight="136.0" prefWidth="443.0" text="Most number of appointments by customer this month:" textAlignment="CENTER" wrapText="true">
+               <font>
+                  <Font name="Menlo Regular" size="26.0" />
+               </font>
+            </Label>
+            <Pane layoutX="228.0" layoutY="119.0" prefHeight="118.0" prefWidth="169.0" style="-fx-border-color: black; -fx-border-radius: 8;">
+               <children>
+                  <Label fx:id="dailyAppointmentCount" alignment="CENTER" contentDisplay="CENTER" layoutX="2.0" layoutY="-3.0" prefHeight="125.0" prefWidth="166.0" text="0000" textAlignment="CENTER">
+                     <font>
+                        <Font size="50.0" />
+                     </font>
+                  </Label>
+               </children>
+            </Pane>
+            <Label fx:id="customerLabel" layoutX="91.0" layoutY="220.0" prefHeight="136.0" prefWidth="443.0" style="-fx-alignment: center;" text="Customer: " textAlignment="CENTER" wrapText="true">
+               <font>
+                  <Font name="Menlo Regular" size="26.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+      <ComboBox fx:id="contactScheduleCombo" layoutX="1134.0" layoutY="505.0" onAction="#contactCombo" prefHeight="27.0" prefWidth="264.0" promptText="Contact Schedule" style="-fx-background-color: #fff; -fx-background-radius: 8; -fx-font-size: 18px; -fx-font-family: Menlo;" />
+      <ComboBox fx:id="apptMonthCombo" layoutX="506.0" layoutY="71.0" onAction="#monthCombo" prefHeight="33.0" prefWidth="219.0" promptText="Month" style="-fx-background-color: #fff; -fx-background-radius: 8; -fx-font-size: 18px; -fx-font-family: Menlo;" />
+      <Label layoutX="110.0" layoutY="77.0" prefHeight="21.0" prefWidth="352.0" text="Number of appointments by Type" textFill="WHITE">
+         <font>
+            <Font name="Menlo Regular" size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="110.0" layoutY="511.0" prefHeight="21.0" prefWidth="223.0" text="Contact appointments" textFill="WHITE">
+         <font>
+            <Font name="Menlo Regular" size="18.0" />
+         </font>
+      </Label>
+      </children>
+</AnchorPane>

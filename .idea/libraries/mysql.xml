@@ -1,0 +1,12 @@
+<component name="libraryTable">
+  <library name="mysql" type="repository">
+    <properties include-transitive-deps="false" maven-id="mysql:mysql-connector-java:8.0.22">
+      <exclude>
+        <dependency maven-id="mysql:mysql-connector-java" />
+      </exclude>
+    </properties>
+    <CLASSES />
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>
