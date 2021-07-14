@@ -1,4 +1,4 @@
-#Smart Schedule 
+# Smart Schedule 
 
 Purpose: This application is a scheduling application that allows the user to make, modify, and delete appointments and customers from the database.
          The program is for a consulting firm that has offices in multiple time zones in North America and the UK. It will display the appointments
